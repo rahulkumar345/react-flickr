@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Animate, initTE } from "tw-elements";
 
-initTE({ Animate });
 function App() {
   const [photos, setPhotos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -177,18 +175,6 @@ function App() {
                 Search
               </button>
             </form>
-            <button
-              onClick={() => handleSearch("")}
-              className="px-4 py-2 mr-2 font-bold text-white bg-blue-500 rounded"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => handleSearch("about")}
-              className="px-4 py-2 font-bold text-white bg-blue-500 rounded"
-            >
-              About
-            </button>
           </div>
         </nav>
         {suggestedSearches.length > 0 && (
